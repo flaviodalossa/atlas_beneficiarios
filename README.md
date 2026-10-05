@@ -2,22 +2,7 @@
 
 Mapa interativo de beneficiários de planos de saúde por município, pronto para GitHub Pages. HTML, CSS e JavaScript com Leaflet. Não precisa de instalação, compilação, servidor de aplicação ou chaves de acesso.
 
-## Publicar pelo site do GitHub
 
-1. Crie um repositório público, por exemplo `atlas-beneficiarios`.
-2. Extraia o arquivo `atlas_beneficiarios_github.zip` no seu computador.
-3. No repositório, clique em **Add file → Upload files**.
-4. Envie **o conteúdo extraído**, incluindo as pastas `data/` e `vendor/`, e salve as alterações na branch `main` (ou na branch principal do seu repositório).
-5. Confira que `index.html` aparece diretamente na raiz do repositório. Não envie apenas o ZIP, nem coloque todos os arquivos dentro de uma pasta adicional.
-6. Abra **Settings → Pages**. Em **Build and deployment → Source**, escolha **Deploy from a branch**.
-7. Selecione a branch principal (`main`, normalmente), a pasta **/ (root)** e clique em **Save**.
-8. Aguarde a publicação. O endereço do site aparecerá nessa mesma página, normalmente `https://SEU_USUARIO.github.io/atlas-beneficiarios/`.
-
-Os arquivos estão abaixo do limite de tamanho para envio pelo navegador. Preserve a organização das pastas. O arquivo `.nojekyll` indica que a aplicação já está pronta para publicação como arquivos estáticos.
-
-Referências: [envio de arquivos](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository) e [configuração do GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-
-## Estrutura do repositório
 
 ```text
 index.html
