@@ -54,16 +54,5 @@ As faixas de preço do CSV são uma classificação diferente das categorias dos
 
 Este pacote contém somente a aplicação e os resumos agregados necessários à visualização. Os parquets analíticos e o código de processamento foram preservados separadamente no projeto de análise.
 
-## Atualizar
-
-Substitua os arquivos da aplicação ou os resumos em `data/` por uma nova versão e salve as alterações na branch configurada. O GitHub Pages fará uma nova publicação.
-
-## Testar no computador (opcional)
-
-Na pasta extraída, com Python disponível:
-
-```shell
-python -m http.server 8765
-```
 
 Abra `http://127.0.0.1:8765`. O servidor local serve apenas para testes; os visitantes do GitHub Pages não precisam dele.
