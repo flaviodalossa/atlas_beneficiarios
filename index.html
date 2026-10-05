@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore beneficiários de planos de saúde por município, preço, idade, contratação e operadora.">
+  <title>Atlas dos beneficiários · Brasil</title>
+  <link rel="stylesheet" href="vendor/leaflet.css"><link rel="stylesheet" href="styles.css">
+  <script defer src="vendor/leaflet.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand"><div class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div><p class="eyebrow">SAÚDE SUPLEMENTAR / TERRITÓRIO</p><h1>Atlas dos beneficiários<span>Brasil</span></h1></div></div>
+    <div class="national"><span id="national-label">Beneficiários no Brasil · recorte padrão</span><strong id="national-total">—</strong><small id="reference">Carregando referência…</small></div>
+  </header>
+  <main>
+    <section class="map-section" aria-label="Mapa dos municípios brasileiros">
+      <div class="toolbar"><div class="search-wrap"><label for="search">ENCONTRE UM MUNICÍPIO</label><div class="search-line"><input id="search" type="search" list="municipality-list" placeholder="Nome do município ou código IBGE" autocomplete="off"><datalist id="municipality-list"></datalist><button id="search-go" aria-label="Buscar município">Buscar</button></div></div><button id="reset" class="secondary">Ver Brasil</button></div>
+      <div class="scope-toolbar"><label for="include-dental"><input type="checkbox" id="include-dental" disabled> Incluir planos exclusivamente odontológicos</label><p id="scope-note">Padrão: excluir planos exclusivamente odontológicos.</p></div>
+      <div class="map-wrap"><div id="map" aria-label="Mapa interativo: passe o mouse ou toque em um município"></div><div id="loading" class="loading" role="status">Preparando o mapa do Brasil…</div><div class="map-hint">Passe o mouse para explorar <span>·</span> Clique para fixar</div>
+        <div class="legend"><div class="legend-head"><strong>Quantidade de beneficiários</strong><label for="scale">Escala <select id="scale"><option value="log">Logarítmica</option><option value="linear">Linear</option></select></label></div><div class="gradient"></div><div id="legend-values" class="legend-values"></div><p id="legend-note">A escala logarítmica torna visíveis as diferenças entre municípios.</p><div class="zero-key"><i></i> Sem beneficiários na base</div></div>
+      </div>
+      <footer class="map-footer"><span id="coverage">Conferindo cobertura territorial…</span><button id="method-button" class="text-button">Fontes e metodologia ↗</button></footer>
+    </section>
+    <aside id="sidebar" aria-label="Indicadores municipais"><div class="side-heading"><p class="eyebrow" id="selection-state">MUNICÍPIO EM DESTAQUE</p><div class="municipality-title"><h2 id="municipality-name">Explore o mapa</h2><span id="municipality-uf"></span></div><p id="municipality-code" class="muted">Carregando indicadores…</p><button id="unlock" class="text-button" hidden>Liberar seleção ×</button></div>
+      <div id="panel-content"></div>
+      <p class="side-footnote">Beneficiários são vínculos com planos, podendo incluir mais de um vínculo por pessoa. Preços representam a mensalidade comercial informada na NTRP.</p>
+    </aside>
+  </main>
+  <dialog id="method-dialog"><div class="dialog-heading"><div><p class="eyebrow">COMO LER OS DADOS</p><h2>Fontes e metodologia</h2></div><button id="close-method" aria-label="Fechar metodologia">×</button></div><div id="method-content"></div></dialog>
+  <noscript>Ative JavaScript para visualizar o mapa e os indicadores.</noscript>
+</body>
+</html>
